@@ -34,7 +34,7 @@ const startApolloServer = async () =>
 	server.applyMiddleware({app});
 	db.conce('open', () =>
 	{
-		app.listen(PORT, () => { console.log(`API on ${PORT} and graphql on ${PATH}${server.graphqlPath}`) } );
+		app.listen(PORT, () => { console.log(`API on ${PORT} and graphql on :${PATH}${server.graphqlPath}`); } );
 	});
 };
 
